@@ -1,0 +1,89 @@
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-color: #f8f8f8;
+}
+
+.heading {
+    font-size: 55px;
+    color: brown;
+    font-family: "Times New Roman", serif;
+    font-weight: bold;
+    text-align: center;
+    padding: 20px;
+    background-color: #fff3e0;
+}
+
+main {
+    max-width: 900px;
+    margin: 30px auto;
+    padding: 20px;
+}
+
+h1 {
+    text-align: center;
+    color: rgb(110, 69, 18);
+    margin-bottom: 35px;
+}
+
+.category-block {
+    background: white;
+    border-radius: 12px;
+    padding: 20px;
+    margin-bottom: 25px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+}
+
+.category-title {
+    text-align: center;
+    margin-bottom: 15px;
+}
+
+.category-title h2 {
+    margin: 0;
+    color: brown;
+}
+
+.category-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 30px;
+}
+
+.food-list {
+    list-style-type: disc;
+    padding-left: 20px;
+    flex: 1;
+    margin: 0;
+}
+
+.food-list li {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 10px;
+    font-size: 18px;
+}
+
+.food-name {
+    color: royalblue;
+}
+
+.food-price {
+    color: green;
+    font-weight: bold;
+}
+
+.image-box {
+    width: 130px;
+    display: flex;
+    justify-content: center;
+}
+
+.category-image {
+    width: 120px;
+    height: 120px;
+    object-fit: cover;
+    border-radius: 10px;
+    border: 2px solid #ddd;
+}
