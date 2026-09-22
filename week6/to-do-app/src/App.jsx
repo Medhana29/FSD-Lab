@@ -20,7 +20,7 @@ function App()
   };
   return (
     <div style={{textAlign:"center",marginTop:"30px"}}>
-      <h2>React To-Do App</h2>
+      <h2>To-Do App</h2>
       <input type="text" placeholder="enter task"
  value={task} onChange={(e)=>setTask(e.target.value)} />
       <button onClick={addTask}>Add Task</button>
