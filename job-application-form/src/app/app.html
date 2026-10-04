@@ -1,0 +1,137 @@
+<div class="container">
+
+  <h2>Student Job Application Form</h2>
+
+  <form [formGroup]="jobForm" (ngSubmit)="onSubmit()">
+
+    <!-- First Name -->
+    <label>First Name</label>
+    <input type="text" formControlName="firstName">
+
+    <div class="error"
+      *ngIf="jobForm.get('firstName')?.invalid &&
+             (jobForm.get('firstName')?.touched || submitted)">
+      First name is required.
+    </div>
+
+
+    <!-- Last Name -->
+    <label>Last Name</label>
+    <input type="text" formControlName="lastName">
+
+    <div class="error"
+      *ngIf="jobForm.get('lastName')?.invalid &&
+             (jobForm.get('lastName')?.touched || submitted)">
+      Last name is required.
+    </div>
+
+
+    <!-- Email -->
+    <label>Email ID</label>
+    <input type="email" formControlName="email">
+
+    <div class="error"
+      *ngIf="jobForm.get('email')?.invalid &&
+             (jobForm.get('email')?.touched || submitted)">
+      Please enter a valid email address.
+    </div>
+
+
+    <!-- Mobile -->
+    <label>Mobile Number</label>
+    <input type="text" formControlName="mobile">
+
+    <div class="error"
+      *ngIf="jobForm.get('mobile')?.invalid &&
+             (jobForm.get('mobile')?.touched || submitted)">
+      Mobile number must contain exactly 10 digits.
+    </div>
+
+
+    <!-- Date of Birth -->
+    <label>Date of Birth</label>
+    <input type="date" formControlName="dob">
+
+    <div class="error"
+      *ngIf="jobForm.get('dob')?.invalid &&
+             (jobForm.get('dob')?.touched || submitted)">
+      Date of birth is required.
+    </div>
+
+
+    <!-- Gender -->
+    <label>Gender</label>
+
+    <select formControlName="gender">
+      <option value="">Select Gender</option>
+      <option value="Male">Male</option>
+      <option value="Female">Female</option>
+      <option value="Other">Other</option>
+    </select>
+
+    <div class="error"
+      *ngIf="jobForm.get('gender')?.invalid &&
+             (jobForm.get('gender')?.touched || submitted)">
+      Please select your gender.
+    </div>
+
+
+    <!-- Qualification -->
+    <label>Highest Qualification</label>
+
+    <select formControlName="qualification">
+      <option value="">Select Qualification</option>
+      <option value="B.Tech">B.Tech</option>
+      <option value="B.E">B.E</option>
+      <option value="B.Sc">B.Sc</option>
+      <option value="BCA">BCA</option>
+      <option value="M.Tech">M.Tech</option>
+      <option value="MCA">MCA</option>
+      <option value="Other">Other</option>
+    </select>
+
+    <div class="error"
+      *ngIf="jobForm.get('qualification')?.invalid &&
+             (jobForm.get('qualification')?.touched || submitted)">
+      Please select your qualification.
+    </div>
+
+
+    <!-- Skills -->
+    <label>Skills</label>
+    <input
+      type="text"
+      formControlName="skills"
+      placeholder="Example: Java, Python, Angular">
+
+    <div class="error"
+      *ngIf="jobForm.get('skills')?.invalid &&
+             (jobForm.get('skills')?.touched || submitted)">
+      Please enter your skills.
+    </div>
+
+
+    <!-- Address -->
+    <label>Address</label>
+
+    <textarea
+      rows="4"
+      formControlName="address"
+      placeholder="Enter your address">
+    </textarea>
+
+    <div class="error"
+      *ngIf="jobForm.get('address')?.invalid &&
+             (jobForm.get('address')?.touched || submitted)">
+      Address is required and must contain at least 10 characters.
+    </div>
+
+
+    <!-- Submit -->
+    <button type="submit">
+      Apply for Job
+    </button>
+
+  </form>
+
+</div>
